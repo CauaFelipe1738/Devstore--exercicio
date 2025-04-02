@@ -31,4 +31,18 @@
         //exibe um formato json
         echo json_encode($result, JSON_UNESCAPED_UNICODE);
     }
+
+    function handleGetFiltroID($pdo){
+        //pega variavel com filtro
+        $filtro = $_GET['idProd'];
+        //sql para consulta
+        $sql = "SELECT * from tblProdutos where idProd='$filtro'";
+        //prepara a execucao
+        $stmt = $pdo->prepare($sql);
+        //executa o comando sql
+        $stmt->execute();
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        //exibe os dados em formato JSON
+        echo json_encode($result, JSON_UNESCAPED_UNICODE);
+    }
 ?>
