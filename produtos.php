@@ -45,4 +45,14 @@
         //exibe os dados em formato JSON
         echo json_encode($result, JSON_UNESCAPED_UNICODE);
     }
+
+    function handleGetFiltroCategoria($pdo){
+        //captura o valor do filtro
+        $filtro = $_GET['categoriaProd'];
+        $sql = "SELECT * FROM tblProdutos WHERE categoriaProd = '$filtro'";
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute();
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        echo json_encode($result, JSON_UNESCAPED_UNICODE);
+    }
 ?>

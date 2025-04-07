@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./assets/css/footer.css">
     <link rel="stylesheet" href="./assets/css/home.css">
     <link rel="stylesheet" href="./assets/css/single-product.css">
+    <link rel="stylesheet" href="./assets/css/produtos.css">
 </head>
 <body>
     <section class="header-warning">
@@ -59,6 +60,39 @@
             placeholder="O que você procura?"/>
         </div>
     </header>
+
+    <main>
+        <section class="breadcrumb" id="breadcrumb">Home > Produtos</section>
+        <section class="info">
+            <div class="product-qt" id="qtde">
+                <span>12</span> Produtos
+            </div>
+            <div class="top-buttons">
+                <div class="top-button" data-name="order">
+                    <div class="top-button-name">Ordenar</div>
+                    <div class="top-button-icon">
+                        <img src="./assets/images/ui/arrow-up-down-line.png" alt="">
+                    </div>
+                </div>
+
+                <div class="top-button" data-name="filter">
+                    <div class="top-button-name">Filtrar</div>
+                    <div class="top-button-icon">
+                        <img src="./assets/images/ui/equalizer-2-line.png">
+                    </div>
+                </div>
+            </div>
+
+            <div class="order-area">
+                <label for="order">Ordernar por</label>
+                <select name="order" id="order">
+                    <option value="price">Preço</option>
+                    <option value="best-selling">Mais vendidos</option>
+                    <option value="alpha">Ordem Alfabética</option>
+                </select>
+            </div>
+        </section>
+    </main>
 
     <footer>
         <div class="footer-menu">
